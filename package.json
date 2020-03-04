@@ -1,18 +1,12 @@
 {
-    "name": "notistack",
-    "version": "0.9.8",
-    "description": "Highly customizable notification snackbars (toasts) that can be stacked on top of each other",
+    "name": "notistack-mod",
+    "version": "0.1.5",
+    "description": "Notistack with ability to modify active snackbars.",
     "main": "build/index.js",
     "types": "build/index.d.ts",
     "license": "MIT",
-    "author": {
-        "name": "Hossein Dehnokhalaji",
-        "email": "hossein.dehnavi98@yahoo.com",
-        "url": "https://github.com/iamhosseindhv/notistack"
-    },
-    "homepage": "https://www.iamhosseindhv.com/notistack",
     "repository": {
-        "url": "git+https://github.com/iamhosseindhv/notistack.git",
+        "url": "git+https://github.com/redrusty2/notistack.git",
         "type": "git"
     },
     "scripts": {
@@ -53,9 +47,6 @@
         "hoist-non-react-statics": "^3.3.0",
         "prop-types": "^15.7.2",
         "react-is": "^16.8.6"
-    },
-    "bugs": {
-        "url": "https://github.com/iamhosseindhv/notistack/issues"
     },
     "contributors": [
         "Hossein Dehnokhalaji (https://www.iamhosseindhv.com/)"

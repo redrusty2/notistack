@@ -12,6 +12,7 @@ const withSnackbar = (Component) => {
                     ref={ref}
                     enqueueSnackbar={context.enqueueSnackbar}
                     closeSnackbar={context.closeSnackbar}
+                    modifySnackbar={context.modifySnackbar}
                 />
             )}
         </SnackbarContext.Consumer>

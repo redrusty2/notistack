@@ -28,6 +28,7 @@ class SnackbarProvider extends Component {
             contextValue: {
                 enqueueSnackbar: this.enqueueSnackbar,
                 closeSnackbar: this.closeSnackbar,
+                modifySnackbar: this.modifySnackbar
             },
         };
     }
@@ -81,6 +82,35 @@ class SnackbarProvider extends Component {
         });
 
         return id;
+    };
+
+    modifySnackbar = (key, options = {}) => {
+        const state = {...this.state};
+        let snack = null;
+
+        for(let i = 0; i < state.snacks.length; i++){
+            if(state.snacks[i].key === key){
+                snack = Object.assign(state.snacks[i], options);
+                break;
+            }
+        }
+        if(snack == null){
+            for(let i = 0; i < state.queue.length; i++){
+                if(state.queue[i].key === key){
+                    snack = Object.assign(state.queue[i], options);
+                    break;
+                }
+            }
+        }
+        if(snack == null) return;
+
+        if (options.persist) {
+            snack.autoHideDuration = undefined;
+        }
+
+        this.setState(state);
+
+        return key;
     };
 
     /**
